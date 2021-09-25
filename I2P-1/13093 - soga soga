@@ -43,7 +43,7 @@ int main(){
             block *remove = mid;
             block *clone = mid;
             if (n % 2 == 0) mid = mid->next;
-            else mid = mid = mid->prev;
+            else mid = mid->prev;
             n -= 1;
             if(loc == remove) loc = loc->next;
             clone->next->prev = clone->prev;
