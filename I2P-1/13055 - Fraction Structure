@@ -23,7 +23,6 @@ void Reduction (Fraction*a) {
     long long GCD = gcd(a->numerator, a->denominator);
     a->numerator /= GCD;
     a->denominator /= GCD;
-    return *a;
 }
 
 Fraction Add(Fraction a, Fraction b){
@@ -61,7 +60,7 @@ Fraction Div (Fraction a, Fraction b) {
 int Compare (Fraction a, Fraction b) {
     a.numerator *= b.denominator;
     b.numerator *= a.denominator;
-    return (a.numerator > b.numerator) ? 1 : 0;
+    return a.numerator > b.numerator;
 }
 
 long long gcd(long long a, long long b) {
